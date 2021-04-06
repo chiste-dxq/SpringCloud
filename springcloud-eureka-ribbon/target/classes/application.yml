@@ -1,0 +1,16 @@
+server:
+  port: 8992
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8990/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+
+
+spring:
+  application:
+    name: eureka-ribbon
